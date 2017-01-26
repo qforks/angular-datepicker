@@ -60,6 +60,8 @@ Module.directive('dateRange', ['$compile', 'datePickerUtils', 'dateTimeConfig', 
 
       scope.start = createMoment(scope.start);
       scope.end = createMoment(scope.end);
+      scope.minDate = createMoment(scope.minDate);
+      scope.maxDate = createMoment(scope.maxDate);
 
       scope.$watchGroup(['start', 'end'], function (dates) {
         //Scope data changed, update picker min/max
